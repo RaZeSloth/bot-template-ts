@@ -1,6 +1,6 @@
 import * as fs from "fs";
 
-module.exports = (client, Discord) => {
+export default (client, Discord) => {
     const load_dir = (dirs) => {
         const event_files = fs.readdirSync(`./events/${dirs}`).filter(file => file.endsWith('.js'));
 

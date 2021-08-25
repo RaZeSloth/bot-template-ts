@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "tsc && node .",
     "test": "echo \"Error: no test specified\" && exit 1"

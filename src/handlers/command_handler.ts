@@ -1,13 +1,12 @@
 import * as fs from "fs";
 import { Collection } from "discord.js";
-
-module.exports = (client, Discord) => {
+export default (client, Discord) => {
     client.commands = new Collection();
-    const categories = fs.readdirSync('./commands/');
+    const categories = fs.readdirSync(`../commands/`);
     for (const category of categories) {
-        const commandFiles = fs.readdirSync(`./commands/${category}`).filter(File => File.endsWith('.js'));
+        const commandFiles = fs.readdirSync(`${__dirname}/commands/${category}`).filter(File => File.endsWith('.js'));
         for (const file of commandFiles) {
-            const command = require(`../commands/${category}/${file}`);
+            const command = require(`${__dirname}/commands/${category}/${file}`);
             if (command.name) {
                 client.commands.set(command.name, command);
             } else {
