@@ -1,5 +1,5 @@
 import { Client, Message } from "discord.js";
-
+console.log("sus")
 export default {
     name: "test",
     description: "a test",

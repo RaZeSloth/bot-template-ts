@@ -1,6 +1,6 @@
 import { Client, Message } from "discord.js";
 const cooldowns = new Map()
-const ms = require('pretty-ms');
+import ms from 'pretty-ms';
 export default async (Discord, client, message: Message) => {
     const prefix = 'ts ';//CHANGABLE
     if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
