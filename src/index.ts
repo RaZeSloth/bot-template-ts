@@ -5,8 +5,8 @@ import ch from "./handlers/command_handler";
 import eh from "./handlers/event_handler";
 ch(client, Discord);
 eh(client, Discord)
-require("dotenv").config();
-
+import dotenv from "dotenv";
+dotenv.config()
 client.login(process.env.token).catch(() => {
     console.error("Invalid token!");
     return process.exit();

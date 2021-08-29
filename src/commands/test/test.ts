@@ -1,9 +1,10 @@
 import { Client, Message } from "discord.js";
-console.log("sus")
 export default {
     name: "test",
     description: "a test",
-    execute(client:Client, message:Message, args: string[], Discord: any, cmd: string): void {
+    cooldown: 10,
+    aliases: ["t"],
+    execute(client:Client, message:Message, args: string[], cmd: string): void {
         message.channel.send("Test work!")
         return;
     }

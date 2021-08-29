@@ -1,17 +1,16 @@
-import { Client, Message } from "discord.js";
+import { Client, Message, Collection } from "discord.js";
 const cooldowns = new Map()
 import ms from 'pretty-ms';
-export default async (Discord, client, message: Message) => {
-    const prefix = 'ts ';//CHANGABLE
+export default async (client, message: Message) => {
+    const prefix = 'ts ';//CHANGABLEc
     if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
    
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
-
     const command = client.commands.get(cmd) || client.commands.find(r => r.aliases && r.aliases.includes(cmd));
     try {
         if (!cooldowns.has(command.name)) {
-            cooldowns.set(command.name, new Discord.Collection())
+            cooldowns.set(command.name, new Collection())
         }
     } catch (e) {
         return;
@@ -32,7 +31,7 @@ export default async (Discord, client, message: Message) => {
     client.time_stamps.set(message.author.id, current_time)
     setTimeout(() => client.time_stamps.delete(message.author.id), client.cooldown_amount)
     try {
-        if (command) command.execute(client, message, args, Discord, cmd);
+        if (command) command.execute(client, message, args, cmd);
     } catch (err) {
         message.channel.send(':x: | Got an error... ' + err)
         console.log(err);
