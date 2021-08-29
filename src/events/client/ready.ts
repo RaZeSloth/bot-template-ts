@@ -1,3 +1,3 @@
 export default (Discord, client, __) => {
-    console.log(`${client.user.username} is online!`);
-}
+	console.log(`${client.user.username} is online!`);
+};

@@ -1,22 +1,24 @@
 {
   "name": "template",
   "version": "1.0.0",
-  "description": "",
-  "main": "./lib/index.js",
+  "description": "TypeScript bot example",
+  "main": "index.ts",
   "type": "commonjs",
   "scripts": {
-    "start": "ts-node src",
+    "start": "ts-node index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "RaZe <75721601+RaZegame@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
-    "pretty-ms": "^7.0.1"
+    "pretty-ms": "^7.0.1",
+    "typescript": "^4.4.2"
   },
   "devDependencies": {
     "@types/node": "^15.12.0"
-  }
+  },
+  "repository": "https://github.com/RaZegame/bot-template-ts.git"
 }
