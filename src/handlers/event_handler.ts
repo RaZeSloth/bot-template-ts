@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';
 import path from 'path';
 export default async (client, Discord) => {
 	const load_dir = async (dir) => {
