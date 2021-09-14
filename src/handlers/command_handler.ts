@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { Collection } from 'discord.js';
-export default async (client, Discord) => {
-	client.commands = new Collection();
+import { Bot } from '../../util/client';
+export default async (client: Bot, Discord) => {
 
 	const commandDir = '../../src/commands/';
 	const categories = fs.readdirSync(path.resolve(__dirname, '../commands'));

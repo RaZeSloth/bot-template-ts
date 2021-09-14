@@ -1,7 +1,7 @@
 import { Client, Message, Collection } from 'discord.js';
-const cooldowns = new Map();
 import ms from 'pretty-ms';
-export default async (client, message: Message) => {
+import { Bot } from '../../../util/client';
+export default async (client: Bot, message: Message) => {
 	const prefix = process.env.prefix || 'ts '; //PREFIX
 	if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot)
 		return;
@@ -12,15 +12,15 @@ export default async (client, message: Message) => {
 		client.commands.get(cmd) ||
 		client.commands.find((r) => r.aliases && r.aliases.includes(cmd));
 	try {
-		if (!cooldowns.has(command.name)) {
-			cooldowns.set(command.name, new Collection());
+		if (!client.cooldowns.has(command.name)) {
+			client.cooldowns.set(command.name, new Collection());
 		}
 	} catch (e) {
 		return;
 	}
 
 	const current_time = Date.now();
-	client.time_stamps = cooldowns.get(command.name);
+	client.time_stamps = client.cooldowns.get(command.name);
 	client.cooldown_amount = command.cooldown * 1000;
 
 	if (client.time_stamps.has(message.author.id)) {

@@ -1,8 +1,8 @@
 import { Client } from 'discord.js';
 import Discord from 'discord.js';
-const client = new Client({
-	intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
-});
+import { Bot } from './util/client';
+
+const client = new Bot()
 import ch from './src/handlers/command_handler';
 import eh from './src/handlers/event_handler';
 ch(client, Discord);
