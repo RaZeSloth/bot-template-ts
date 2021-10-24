@@ -1,6 +1,6 @@
 import { Client } from 'discord.js';
 import Discord from 'discord.js';
-import { Bot } from './util/client';
+import { Bot } from './src/util/client';
 
 const client = new Bot()
 import ch from './src/handlers/command_handler';

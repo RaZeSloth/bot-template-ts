@@ -1,6 +1,6 @@
 import { Client, Message, Collection } from 'discord.js';
 import ms from 'pretty-ms';
-import { Bot } from '../../../util/client';
+import { Bot } from '../../util/client';
 export default async (client: Bot, message: Message) => {
 	const prefix = process.env.prefix || 'ts '; //PREFIX
 	if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot)

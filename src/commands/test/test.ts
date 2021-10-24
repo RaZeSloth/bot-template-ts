@@ -1,5 +1,5 @@
 import { Message } from 'discord.js';
-import { Bot } from '../../../util/client';
+import { Bot } from '../../util/client';
 export default {
 	name: 'test',
 	description: 'a test',
