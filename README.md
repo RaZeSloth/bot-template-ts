@@ -18,5 +18,8 @@ prefix=!
 
 First, you'd have to build the project with `yarn install` to start the bot run `yarn run start`
 
+If wanted the code can be compiled to JavScript with `yarn build`, use `yarn build` to run the JavaScript with nodejs
+
+
 # Need support? 
 Dm me on discord, RaZe#2841

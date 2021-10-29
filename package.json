@@ -6,6 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "ts-node index.ts",
+    "build": "tsc",
+    "built": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
