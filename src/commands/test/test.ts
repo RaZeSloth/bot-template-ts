@@ -6,7 +6,7 @@ export default {
 	cooldown: 10,
 	aliases: ['t'],
 	execute(client: Bot, message: Message, args: string[], cmd: string): void {
-		message.channel.send('Test work!');
+		message.channel.send('Test works!');
 		return;
 	},
 };
