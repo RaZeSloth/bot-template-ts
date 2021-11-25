@@ -7,7 +7,7 @@ export default async (client: Bot, Discord) => {
 	for await (const category of categories) {
 		const commandFiles = fs
 			.readdirSync(path.resolve(__dirname, `../commands/${category}`))
-			.filter((File) => File.endsWith('.ts'));
+			.filter((File) => File.endsWith('.ts') || File.endsWith('.js'));
 		for await (const file of commandFiles) {
 			const command = await import(`../commands/${category}/${file}`);
 			if (command.default.name) {
