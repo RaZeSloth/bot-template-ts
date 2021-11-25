@@ -16,7 +16,7 @@ prefix=!
 
 # Starting the project
 
-First, you'd have to build the project with `yarn install` to start the bot run `yarn run start`
+First, you'd have to build the project with `yarn install` to start the bot run `yarn start:dev` or `yarn start` for live environment
 
 If wanted, the code can be compiled to JavScript with `yarn build`, use `yarn built` to run the JavaScript with nodejs
 
