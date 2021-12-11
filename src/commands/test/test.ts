@@ -1,5 +1,6 @@
 import { Message } from 'discord.js';
 import { Bot } from '../../util/client';
+import { command } from '../../util/interfaces';
 export default {
 	name: 'test',
 	description: 'a test',
@@ -9,4 +10,4 @@ export default {
 		message.channel.send('Test works!');
 		return;
 	},
-};
+} as command;
