@@ -22,4 +22,4 @@ If wanted, the code can be compiled to JavScript with `yarn build`, use `yarn bu
 
 
 # Need support? 
-Dm me on discord, RaZe#2841
+Dm me on discord, RaZe#5270
