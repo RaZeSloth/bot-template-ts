@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "RaZe <75721601+RaZegame@users.noreply.github.com>",
+  "author": "RaZe <75721601+RaZeSloth@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.6.0",
@@ -24,5 +24,5 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
-  "repository": "https://github.com/RaZegame/bot-template-ts.git"
+  "repository": "https://github.com/RaZeSloth/bot-template-ts.git"
 }
