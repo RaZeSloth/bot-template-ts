@@ -6,7 +6,7 @@ export default {
 	description: 'a test',
 	cooldown: 10,
 	aliases: ['t'],
-	execute(client: Bot, message: Message, args: string[], cmd: string): void {
+	async execute(client: Bot, message: Message, args: string[], cmd: string): Promise<void> {
 		message.channel.send('Test works!');
 		return;
 	},
