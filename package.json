@@ -15,12 +15,20 @@
   "author": "RaZe <75721601+RaZeSloth@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
+    "enmap": "^5.9.0",
+    "eris": "^0.16.1",
     "pretty-ms": "^7.0.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },

@@ -1,4 +1,4 @@
-import { Message } from 'discord.js';
+import { Message } from 'eris';
 import { Bot } from '../../util/client';
 import { command } from '../../util/interfaces';
 export default {
@@ -7,7 +7,6 @@ export default {
 	cooldown: 10,
 	aliases: ['t'],
 	async execute(client: Bot, message: Message, args: string[], cmd: string): Promise<void> {
-		message.channel.send('Test works!');
-		return;
+		message.channel.createMessage({ messageReference: { messageID: message.id }, content: 'Test works!' });
 	},
 } as command;

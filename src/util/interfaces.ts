@@ -1,5 +1,5 @@
-import { Message } from "discord.js";
-import { Bot } from "./client";
+import { Message } from 'eris';
+import { Bot } from './client';
 
 interface command {
     name: string;
@@ -9,4 +9,4 @@ interface command {
     execute(client: Bot, message: Message, args?: string[], cmd?: string): Promise<any> | any;
 }
 
-export { command }
+export { command };
