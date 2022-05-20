@@ -1,10 +1,10 @@
-import { Client, Message, Collection } from 'discord.js';
+import { Message, Collection } from 'discord.js';
 import ms from 'pretty-ms';
 import { Bot } from '../../util/client';
 export default async (client: Bot, message: Message) => {
-	const prefix = process.env.prefix || 'ts '; //PREFIX
-	if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot)
-		return;
+	// PREFIX
+	const prefix = process.env.prefix || 'ts ';
+	if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const cmd = args.shift().toLowerCase();
@@ -15,7 +15,8 @@ export default async (client: Bot, message: Message) => {
 		if (!client.cooldowns.has(command.name)) {
 			client.cooldowns.set(command.name, new Collection());
 		}
-	} catch (e) {
+	}
+	catch (e) {
 		return;
 	}
 
@@ -33,7 +34,7 @@ export default async (client: Bot, message: Message) => {
 				.send(
 					`Oops you are on a cooldown for ${ms(time_left * 1000, {
 						verbose: true,
-					})}!`
+					})}!`,
 				)
 				.then((m) => {
 					setTimeout(() => m.delete(), 2500);
@@ -43,11 +44,12 @@ export default async (client: Bot, message: Message) => {
 	client.time_stamps.set(message.author.id, current_time);
 	setTimeout(
 		() => client.time_stamps.delete(message.author.id),
-		client.cooldown_amount
+		client.cooldown_amount,
 	);
 	try {
 		if (command) command.execute(client, message, args, cmd);
-	} catch (err) {
+	}
+	catch (err) {
 		message.channel.send(':x: | Got an error... ' + err);
 		console.log(err);
 	}

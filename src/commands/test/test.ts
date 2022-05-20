@@ -8,6 +8,5 @@ export default {
 	aliases: ['t'],
 	async execute(client: Bot, message: Message, args: string[], cmd: string): Promise<void> {
 		message.channel.send('Test works!');
-		return;
 	},
 } as command;
