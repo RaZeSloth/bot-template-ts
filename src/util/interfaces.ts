@@ -8,5 +8,5 @@ interface command {
     cooldown: number;
     execute(client: Bot, message: Message, args?: string[], cmd?: string): Promise<any> | any;
 }
-type slashCommand = ApplicationCommandStructure & { execute(client: Bot, interaction: CommandInteraction, args): Promise<any> | any }
+type slashCommand = ApplicationCommandStructure & { execute(client: Bot, interaction: CommandInteraction): Promise<any> | any }
 export { command, slashCommand };
