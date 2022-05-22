@@ -1,4 +1,4 @@
-import { Message } from 'eris';
+import { ApplicationCommandStructure, CommandInteraction, Message } from 'eris';
 import { Bot } from './client';
 
 interface command {
@@ -8,5 +8,5 @@ interface command {
     cooldown: number;
     execute(client: Bot, message: Message, args?: string[], cmd?: string): Promise<any> | any;
 }
-
-export { command };
+type slashCommand = ApplicationCommandStructure & { execute(client: Bot, interaction: CommandInteraction, args): Promise<any> | any }
+export { command, slashCommand };

@@ -1,8 +1,8 @@
 import Eris, { Client } from 'eris';
-import { command } from './interfaces';
+import { command, slashCommand } from './interfaces';
 import Enmap from 'enmap';
 class Bot extends Client {
-	public commands: Enmap<string, command>;
+	public commands: Enmap<string, command | slashCommand>;
 	public time_stamps: Enmap<string, number>;
 	public cooldown_amount: number;
 	public cooldowns: Enmap<string, Enmap<string, number>>;

@@ -2,6 +2,7 @@ import Enmap from 'enmap';
 import { Message } from 'eris';
 import ms from 'pretty-ms';
 import { Bot } from '../../util/client';
+import { command, slashCommand } from '../../util/interfaces';
 export default async (client: Bot, message: Message) => {
 	// PREFIX
 	const prefix = process.env.prefix || 'ts ';
@@ -10,8 +11,8 @@ export default async (client: Bot, message: Message) => {
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const cmd = args.shift().toLowerCase();
 	const command =
-		client.commands.get(cmd) ||
-		client.commands.find((r) => r.aliases && r.aliases.includes(cmd));
+		client.commands.find((c: command | slashCommand) => c.name === cmd && !(c as slashCommand)?.type) as command ||
+		client.commands.find((r:command) => r?.aliases && r?.aliases?.includes(cmd)) as command;
 	try {
 		if (!client.cooldowns.has(command.name)) {
 			client.cooldowns.set(command.name, new Enmap());
@@ -37,7 +38,7 @@ export default async (client: Bot, message: Message) => {
 						verbose: true,
 					})}!`,
 				)
-				.then((m) => {
+				.then((m: Message) => {
 					setTimeout(() => m.delete(), 2500);
 				});
 		}
