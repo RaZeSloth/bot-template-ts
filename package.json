@@ -15,22 +15,22 @@
   "author": "RaZe <75721601+RaZeSloth@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.0.1",
     "enmap": "^5.9.0",
-    "eris": "^0.16.1",
+    "eris": "^0.17.0",
     "pretty-ms": "^7.0.1"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^8.0.1",
+    "@types/node": "^17.0.41",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-n": "^15.2.1",
     "eslint-plugin-promise": "^6.0.0",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.2"
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
   },
   "repository": "https://github.com/RaZeSloth/bot-template-ts.git"
 }
