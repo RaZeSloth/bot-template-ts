@@ -65,6 +65,6 @@
 		/* Advanced Options */
 		"forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
 	},
-	"include": ["./**/*.ts", "index.ts", "./src/util/env.d.ts", ".env"],
+	"include": ["./**/*.ts", "src/index.ts", "./src/util/env.d.ts", ".env"],
 	"exclude": ["node_modules"]
 }

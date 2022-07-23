@@ -1,12 +1,8 @@
-import { Message } from 'discord.js';
+import { ApplicationCommandDataResolvable, ChatInputCommandInteraction } from 'discord.js';
 import { Bot } from './client';
 
-interface command {
-    name: string;
-    description?: string;
-    aliases?: string[];
-    cooldown: number;
-    execute(client: Bot, message: Message, args?: string[], cmd?: string): Promise<any> | any;
+type command = ApplicationCommandDataResolvable & {
+    execute(client: Bot, interaction: ChatInputCommandInteraction): Promise<unknown> | unknown;
 }
 
 export { command };

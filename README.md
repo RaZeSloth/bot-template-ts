@@ -11,7 +11,7 @@ commands
 Example of the env
 ```bath
 token=YourToken
-prefix=!
+testGuild=guildId
 ```
 
 # Starting the project

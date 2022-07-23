@@ -9,16 +9,16 @@
     "start:dev": "yarn start:dev",
     "build": "tsc",
     "built": "node ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "yarn run eslint --fix --ext .ts ./src"
   },
   "keywords": [],
   "author": "RaZe <75721601+RaZeSloth@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.8.0",
+    "discord.js": "^14.0.3",
     "dotenv": "^16.0.1",
-    "eslint": "^8.17.0",
-    "pretty-ms": "^7.0.1"
+    "eslint": "^8.17.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.41",

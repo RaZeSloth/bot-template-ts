@@ -3,7 +3,7 @@ declare global {
   namespace NodeJS {
       interface ProcessEnv {
         token: string;
-        prefix: string;
+        testGuild?: string;
       }
   }
 }

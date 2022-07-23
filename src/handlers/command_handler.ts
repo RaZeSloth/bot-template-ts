@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { Bot } from '../util/client';
-export default async (client: Bot, Discord) => {
+export default async (client: Bot) => {
 	const categories = fs.readdirSync(path.resolve(__dirname, '../commands'));
 	for await (const category of categories) {
 		const commandFiles = fs
